@@ -21,4 +21,20 @@ In pont of Spring it allow JDK dynamic proxy, Implimentation hiding (No class is
 of a interface and then you pass implimented class(beans) from outside . __DI__)   
 For Example please have a look on GitRepo:  
 
+## _Q4_: What is Application Context ?  
+Answer::  
+__Application Context__ is central part of Spring, this is rewsponsible for may things like   
+* initating Beans  
+* configure beans  
+* Assemble beans  
+* Manage bean life cycle  
+This means bean related all things are handle by Application context and this is also responsible for _BeanFactory, resource loader, Event registered and listners and property resolver_.  Application ctx
+require configuration for beans knowns as metadata which is mainly provideed by xml, annotation and java code, On basis of this it is divided in areas.  
+There are diffrent type of Context in Spring:-  
+* __AnnotationConfigApplicationContext__ : In this we provide configuration by annotation.  
+* __AnnotationConfigWebApplicationCtx__ : In this we provide config by annottion but for web application not standart application.  
+* __ClassPathXmlApplicationCtx__ : This is where you provide config by xml file present in classpath only.  
+* __FileSystemXmlAWpplicationCtx__ : This is where you provide config by providing config using xml which is present any where in file system.  
+* __XmlWebApplicationCtx__ : This is for web application in which config provided by xml.  
+
 
