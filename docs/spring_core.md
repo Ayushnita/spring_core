@@ -58,3 +58,18 @@ Life Cycle of Container in Spring::
 * Ctx Close  
 * dstruction method call  
 
+## _Q6_ : How you are going to create a instance of an Applicaiton Context ?  
+Answer::  
+There are many ways to create a Application context depends for which type of Application Context you want to create like  
+* __Non-WebApplication__ :  
+	* AnnotationConfigurationApplicationContext :  In this create a instance of __AnnotationConfigurationApplicationContext__ Class by passing a class which is config class containing bean annotated with  __componentscan__ or you can provide bean using __@Bean__ (for third part libs)  and you can also pass base package or use scan method to set base package for config location.  
+	* ClassPathXmlConfigContext : In this case we are providing config using xml file which is present in classpath location this xml file contain all beans related configuration.  
+	* FileSystemApplicationContext : In this we provide xml as same as before but this time  xml file present anywhere in file system.  
+* __WebApplication__ :  
+	* Web.xml :  In web application we have to provide a Web.xml file in which we provide servlet, ContextLoaderListner ( which take care of xml ) which load all config for spring beans other thing all are same in beans.xml file.  
+	* Java Based : This is a annotation based configuration in which you provide empty web.xml file and all configuration came in a class which implements __WebApplicationInitlizer__ interface and 
+create a object of __XmlWebApplicationContext__ and set everything there.  
+	* Annotation Based : Everything is same as above case only diffrence is in place of __XmlWebApplicationContext__ you provide __AnnotaionConfigWebApplicationContext__ class Pbject.  Then you provide beans.  
+* __SPRINGBOOT__ :  
+	* SpringBoot : In this you only provide _@SpringBootApplication_ Anotation and this will scan all other things as usal.  
+
