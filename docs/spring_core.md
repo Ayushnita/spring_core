@@ -28,13 +28,33 @@ __Application Context__ is central part of Spring, this is rewsponsible for may 
 * configure beans  
 * Assemble beans  
 * Manage bean life cycle  
+
 This means bean related all things are handle by Application context and this is also responsible for _BeanFactory, resource loader, Event registered and listners and property resolver_.  Application ctx
 require configuration for beans knowns as metadata which is mainly provideed by xml, annotation and java code, On basis of this it is divided in areas.  
 There are diffrent type of Context in Spring:-  
+
 * __AnnotationConfigApplicationContext__ : In this we provide configuration by annotation.  
 * __AnnotationConfigWebApplicationCtx__ : In this we provide config by annottion but for web application not standart application.  
 * __ClassPathXmlApplicationCtx__ : This is where you provide config by xml file present in classpath only.  
 * __FileSystemXmlAWpplicationCtx__ : This is where you provide config by providing config using xml which is present any where in file system.  
 * __XmlWebApplicationCtx__ : This is for web application in which config provided by xml.  
 
+
+## _Q5_: What is container and its life cycle?  
+Answer::  
+Let take a Example, if have to make a rest API then you have to configure every thing foe http, sest and other thing but if you get a environment where you get all configuration setup by default and 
+you only require write bussiness logic that is good one. This is container, you can read more in docker or contaier concept sepratly.  
+Life Cycle of Container in Spring::  
+* Application Started  
+* Spring Container Created  
+* Container Read Config  
+* Beans created from config  
+* Post Process for modify bean run  
+* Bean Created ( still no property value set)  
+* Bean dependency injected  
+* Post processor  
+* Run time  
+* Application shutdown  
+* Ctx Close  
+* dstruction method call  
 
