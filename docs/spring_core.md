@@ -94,3 +94,12 @@ There are mainly three phase in any Spring applicatin :-
 As we can see there are various method called in different places after creation bean setting values and other thing.  
 TODO:: Find used of every method why it is added in lifecycle as a hook.  
 
+## _Q8_ : How to create a Application context in Integration test ?  
+Answer::  
+In this is very easy to create application context for testing sepratelly, there are three steps:-
+* Add spring testing dependency in classpath  
+* Add _@RunWith(SpringRunner.class)_ on test class  
+* Add _@ContextConfiguration(classes = ...)_ in place ... you provide ApplicationConfiguration.class or all other classes for which you want todo testing.  
+
+After doing all avobe three steps all beans are avilabel to you for testing purpose. Here in place of ... you may provice test spacific config.  
+
