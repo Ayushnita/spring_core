@@ -73,3 +73,24 @@ create a object of __XmlWebApplicationContext__ and set everything there.
 * __SPRINGBOOT__ :  
 	* SpringBoot : In this you only provide _@SpringBootApplication_ Anotation and this will scan all other things as usal.  
 
+## _Q7_ : Life Cycle of bean in Application Ctx ?  
+Answer::  
+There are mainly three phase in any Spring applicatin :-   
+* __Context Creation__ :  
+* __Bean Created__ :  
+	* instance of bean created  
+	* properties and dependencies are set  
+	* _Bean post processor :: postProcessorBeforeIntilization_  
+	* _@PsotConstruct_ called  
+	* _initlizingBean:: afterPropertiesSet_  
+	* _@Bean(init method)_ called  
+	* _BeanPostProcessor:: postProcessorAfterInitlization_  
+
+* __Bean Destroyed__  
+	* @PreDestroyed  
+	* _DesposableBean:: destroyMethod_ called  
+	* _@Bean(destroyMethod)_ called.  
+
+As we can see there are various method called in different places after creation bean setting values and other thing.  
+TODO:: Find used of every method why it is added in lifecycle as a hook.  
+
