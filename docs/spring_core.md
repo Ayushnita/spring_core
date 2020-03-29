@@ -103,3 +103,13 @@ In this is very easy to create application context for testing sepratelly, there
 
 After doing all avobe three steps all beans are avilabel to you for testing purpose. Here in place of ... you may provice test spacific config.  
 
+## _Q9_ : Prefred way to close a application context, and springboot for this ?  
+Answer::  
+This depend on which type of application you are working :-   
+* Non-Web Application:  
+	* Register shutdown hook by calling ConfigurableApplicationContext#registerShutDownHook (Prefered)  
+	* call close method directly.  
+* Web Application:  
+	* Automatically an event set by servlet and send to container that will close this.  
+* SpringBoot:  
+	* Automatically using shutdownhook for non web and ContextLoaderListner for web.  
