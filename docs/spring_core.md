@@ -8,8 +8,17 @@ can use that class according to its requirement and also in test cases you can p
 For Example please have a look on GitRepo:
 
 
-## _Q2_: What is pattern and how it will help in Spring(DI).  
-Answer::
+## _Q2_: What is pattern and how it will help in Spring(DI)?    
+Answer::  
 Pattern is a way to solve a well known problem statement in a specific way which is developed/find by many other developers over the time. This is a well known and eddicient way to solve this problem.
-There are numbers of pattern which are also divided in diffrent groups, this is a seprate talk and require a lot of time.DI is also a pattern and well known way to apply. There are alo anti pattern which are just opposite of this.
+There are numbers of pattern which are also divided in diffrent groups, this is a seprate talk and require a lot of time.DI is also a pattern and well known way to apply. There are alo anti pattern which are just opposite of this.  
+
+## _Q3_: What is interface and how it is very important for DI? 
+Answer::  
+In point of java it a collection of __abstract function__ and use as a contract for those class which implement them. Interface fouce a class to define all functions which are define in interface.
+This is very usefull for testing and interchangebility.   
+In pont of Spring it allow JDK dynamic proxy, Implimentation hiding (No class is public only the interface is public and you can you that only), Easy to switch beans (This is DI, In class you make a ref
+of a interface and then you pass implimented class(beans) from outside . __DI__)   
+For Example please have a look on GitRepo:  
+
 
